@@ -1,85 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rebekah Jasper | Data Analyst Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Rebekah Jasper | Creative Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f6f8fa; }
-    header { background: #19396a; color: #fff; padding: 32px 0; text-align: center; }
-    section { padding: 2em 10vw; margin-bottom: 2em; background: #fff; border-radius: 8px; }
-    h1, h2 { margin-top: 0; }
-    ul { margin-left: 1.5em; }
-    .skills-list, .soft-skills { columns: 2; }
-    .container { max-width: 900px; margin: auto; }
-    footer { text-align: center; color: #777; padding: 1em 0; background: #eee; }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+    :root {
+      --pastel-blue: #a8dadc;
+      --pastel-pink: #f9c5d1;
+      --pastel-peach: #ffd6a5;
+      --pastel-lavender: #cdb4db;
+      --pastel-green: #b5ead7;
+      --background: #f9fafb;
+      --text-color: #333;
+      --header-color: #292b2c;
+      --accent-color: #6c63ff;
+      --section-bg: #ffffff;
+      --shadow-color: rgba(108, 99, 255, 0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--background);
+      color: var(--text-color);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: var(--pastel-blue);
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--header-color);
+      box-shadow: 0 8px 16px var(--shadow-color);
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    header p {
+      font-weight: 300;
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      background: var(--section-bg);
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 4px 25px var(--shadow-color);
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeSlideIn 0.8s ease forwards;
+      animation-delay: 0.4s;
+    }
+
+    section:nth-child(even) {
+      background: var(--pastel-lavender);
+      color: var(--header-color);
+      box-shadow: 0 4px 25px rgba(205, 180, 219, 0.4);
+    }
+
+    section h2 {
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      font-weight: 600;
+      border-left: 5px solid var(--accent-color);
+      padding-left: 12px;
+      font-size: 1.8rem;
+      letter-spacing: 0.03em;
+    }
+
+    section h3 {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: var(--header-color);
+    }
+
+    p, ul {
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      font-size: 1.1rem;
+    }
+
+    ul {
+      margin-left: 1.6rem;
+      list-style-type: square;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--pastel-peach);
+      color: var(--header-color);
+      font-weight: 400;
+      box-shadow: 0 -4px 12px var(--shadow-color);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeSlideIn {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media(max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      section { padding: 1.2rem 1.6rem; }
+      section h2 { font-size: 1.4rem; }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Rebekah Jasper</h1>
-    <p>Recent Graduate | Data Science & Analytics | Python | R | SQL | Data Visualization</p>
+    <p>Data Analyst | Python • R • SQL • Data Science & Machine Learning</p>
   </header>
-  <div class="container">
-    <section>
-      <h2>Professional Summary</h2>
+  <main>
+    <section style="animation-delay: 0.5s;">
+      <h2>About Me</h2>
       <p>
-        Recent graduate with robust expertise in data science, machine learning, and analytics, with hands-on experience in data transformation, cleaning, and preprocessing real-world datasets. Proficient in Python, SQL, and R, with a solid grasp of ETL, data engineering workflows, and data quality. Skilled in predictive modeling, time series forecasting, and model evaluation, and experienced in data visualization.
+        Recent graduate with expertise in data transformation, cleaning, and preprocessing of real-world datasets. Skilled in Python, SQL, R, machine learning techniques, and data visualization with a passion to turn data into actionable insights for business and social impact.
       </p>
     </section>
-    <section>
+    <section style="animation-delay: 0.7s;">
       <h2>Technical Skills</h2>
-      <div class="skills-list">
-        <ul>
-          <li>Python, R, MATLAB, MySQL</li>
-          <li>Pandas, NumPy, Excel, SQL</li>
-          <li>Matplotlib, Seaborn, Tableau</li>
-          <li>Machine Learning: Classification, Regression, Time Series (ARIMA, LSTM), PCA</li>
-          <li>Model Evaluation: Confusion Matrix, RMSE</li>
-          <li>Statistical Methods: Hypothesis Testing, Correlation Analysis, Feature Selection</li>
-          <li>Data Pre-processing, Normalization, Handling Missing Values</li>
-        </ul>
-      </div>
-      <h2>Soft Skills</h2>
-      <div class="soft-skills">
-        <ul>
-          <li>Analytical Thinking</li>
-          <li>Problem-Solving</li>
-          <li>Communication</li>
-          <li>Team Collaboration</li>
-          <li>Project Management</li>
-        </ul>
-      </div>
+      <ul>
+        <li>Python, R, MATLAB, MySQL</li>
+        <li>Pandas, NumPy, Excel, SQL</li>
+        <li>Matplotlib, Seaborn, Tableau</li>
+        <li>Machine Learning: Classification, Regression, Time Series (ARIMA, LSTM), PCA</li>
+        <li>Model Evaluation: Confusion Matrix, RMSE</li>
+        <li>Statistical Analysis: Hypothesis Testing, Correlation, Feature Selection</li>
+        <li>Data Cleaning, Normalization, Handling Missing Values</li>
+      </ul>
     </section>
-    <section>
+    <section style="animation-delay: 0.9s;">
       <h2>Projects</h2>
-      <h3>Community Connect Project – Decent Work & Economic Growth</h3>
-      <p>Conducted village field survey to support UN SDG 8, analyzed data, raised awareness on employment, and proposed actionable recommendations for rural economic growth.</p>
+      <h3>Community Connect Project – Sustainable Economic Growth</h3>
+      <p>Conducted field survey to analyze rural employment and economic development, proposing actionable insights aligned with UN SDG 8.</p>
 
       <h3>Product Recommendation System (Python)</h3>
-      <p>Developed an online recommendation system using purchase history. Applied machine learning for prediction and optimization, analyzed patterns, and visualized results.</p>
+      <p>Developed an online recommendation system analyzing purchase history using Python and machine learning to optimize product suggestions.</p>
 
       <h3>Time Series Analysis – Social Media Market Share</h3>
-      <p>Built ARIMA and LSTM models to predict market share trends of leading social platforms in India. Compared model accuracy and visualized projections.</p>
+      <p>Built ARIMA and LSTM models predicting social media market share trends in India and assessed performance through RMSE.</p>
     </section>
-    <section>
+    <section style="animation-delay: 1.1s;">
       <h2>Education</h2>
       <ul>
         <li>M.Sc. Data Science and Analytics, Sharda University (2023–2025)</li>
-        <li>Post Graduate Diploma in AI and ML, Indian Institute of Skill Development Training (2024–2025)</li>
-        <li>B.Sc. Mathematics (Honors), Jesus and Mary College, University of Delhi (2020–2023)</li>
+        <li>PG Diploma in AI & ML, Indian Institute of Skill Development (2024–2025)</li>
+        <li>B.Sc. Mathematics (Honors), University of Delhi (2020–2023)</li>
       </ul>
     </section>
-    <section>
-      <h2>Internships & Simulations</h2>
+    <section style="animation-delay: 1.3s;">
+      <h2>Internships & Experience</h2>
       <ul>
-        <li>Plasmid (Data Science Intern): EDA, visualization, recommendation system with Python & Scikit-learn</li>
-        <li>JP Morgan Chase Co. (Simulation): Automated Excel, data visualization for business insights</li>
-        <li>DigiSamaksh (Data Science Intern): Web scraping, data cleaning/preprocessing</li>
-        <li>Oasis Infobyte (Data Science Intern): ML for classification/prediction, EDA</li>
+        <li>Plasmid (Data Science Intern): EDA, visualization, recommender systems</li>
+        <li>JP Morgan Chase (Simulation): Excel automation, dashboards</li>
+        <li>DigiSamaksh (Intern): Web scraping, data cleaning/preprocessing</li>
+        <li>Oasis Infobyte (Intern): Machine learning models and exploratory analysis</li>
       </ul>
     </section>
-    <section>
+    <section style="animation-delay: 1.5s;">
       <h2>Certifications</h2>
       <ul>
         <li>Data Analysis using Python (Simplilearn)</li>
@@ -88,12 +206,12 @@
         <li>Big Data Hadoop & Spark Developer (Simplilearn)</li>
         <li>Tableau Training (Simplilearn)</li>
         <li>Python Bootcamp for AI (Sharda University)</li>
-        <li>Excel Skills for Data Analysts (JP Morgan Chase Forage Simulation)</li>
+        <li>Excel Skills for Data Analysts (JP Morgan Simulation)</li>
       </ul>
     </section>
-  </div>
+  </main>
   <footer>
-    &copy; 2025 Rebekah Jasper. All rights reserved.
+    &copy; 2025 Rebekah Jasper
   </footer>
 </body>
 </html>
